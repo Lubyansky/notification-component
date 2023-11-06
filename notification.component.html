@@ -1,0 +1,29 @@
+<div class="notification">
+    <div class="notification__container">
+        <svg 
+            *ngIf="status === 'success'"
+            class="notification__icon" 
+            width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+        >
+            <circle cx="20" cy="20" r="20" fill="#638E58"/>
+            <circle cx="20" cy="20" r="20" fill="#638E58"/>
+            <path d="M16.6667 28.6667L8.33333 17.5253L11.3408 14.6883L16.8546 22.2277L29.0727 10L31.9444 13.3473L16.6667 28.6667Z" fill="#F5F5F5"/>
+        </svg>
+
+        <svg 
+            *ngIf="status === 'error'"
+            class="notification__icon"
+            width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+        >   
+            <circle cx="20" cy="20" r="20" fill="#EF373E"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0995 16.5466L12.6449 9.09204L9.09117 12.6458L16.5458 20.1004L9.28971 27.3564L12.8435 30.9102L20.0995 23.6542L27.3556 30.9102L30.9093 27.3565L23.6533 20.1004L31.1079 12.6458L27.5541 9.09204L20.0995 16.5466Z" fill="white"/>
+        </svg>
+
+        <div class="notification__content">
+            <div class="notification__label">{{label}}</div>
+            <div class="notification__text">{{text}}</div>
+            <div class="notification__progress-bar"></div>
+        </div>
+    </div>
+
+</div>
